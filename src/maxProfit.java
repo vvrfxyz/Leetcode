@@ -33,4 +33,37 @@ public class maxProfit {
         }
         return noHold;
     }
+    /**
+     * 贪心算法
+     */
+    int maxProfit_3(int[] prices){
+        if (prices==null||prices.length<2){
+            return 0;
+        }
+        int total=0,index=0,length=prices.length;
+        //每次找到一段趋势的最小值和最大值，然后求差值。找到所有趋势的利润求和，就是最大值。
+        while (index<length){
+            //找到上升趋势的最小值
+            while (index<length-1 && prices[index]>=prices[index+1]) {
+                index++;
+            }
+            int min =prices[index];
+            //找到上升趋势的最大值
+            while (index<length-1 && prices[index]<=prices[index+1]){
+                index++;
+            }
+            total+=prices[index++]-min;
+        }
+        return total;
+    }
+
+    int maxProfit_4(int[] prices){
+        int total=0;
+        for (int i=1;i< prices.length;i++){
+            if ((prices[i]-prices[i-1])>0) {
+                total+=(prices[i]-prices[i-1]);
+            }
+        }
+        return total;
+    }
 }
