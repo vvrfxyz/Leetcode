@@ -12,8 +12,5 @@ public class containsDuplicate {
         return false;
     }
 
-    public boolean containsDuplicate(int[] nums) {
 
-        return false;
-    }
 }

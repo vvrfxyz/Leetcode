@@ -66,4 +66,6 @@ public class maxProfit {
         }
         return total;
     }
+
+
 }
