@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class intersect {
     public static int[] intersect(int[] nums1, int[] nums2) {
@@ -13,6 +13,7 @@ public class intersect {
                     if (a==nums2[i]){
                         k=++i;
                         numsResult.add(a);
+                        break;
                     }
                 }
             }
@@ -23,6 +24,7 @@ public class intersect {
                     if (a==nums1[i]){
                         k=++i;
                         numsResult.add(a);
+                        break;
                     }
                 }
             }
@@ -32,6 +34,33 @@ public class intersect {
             result[i]=numsResult.get(i);
         }
         return result;
+    }
+
+    /**
+     * HashMap
+     * @param nums1
+     * @param nums2
+     * @return
+     */
+    public static int[] intersect_(int[] nums1, int[] nums2){
+        HashMap<Integer,Integer> nums1Map=new HashMap<>();
+        List<Integer> resultList=new ArrayList<>();
+
+        for (int i=0;i<nums1.length;i++){
+            nums1Map.put(nums1[i],nums1Map.getOrDefault(nums1[i],0)+1);
+        }
+        for (int i=0;i<nums2.length;i++){
+            if (nums1Map.getOrDefault(nums2[i],0)!=0){
+                resultList.add(nums2[i]);
+                nums1Map.put(nums2[i],nums1Map.get(nums2[i])-1);
+            }
+        }
+        int[] result=new int[resultList.size()];
+        for (int i=0;i<resultList.size();i++){
+            result[i]=resultList.get(i);
+        }
+        return result;
+
     }
 
     public static void main(String[] args) {
