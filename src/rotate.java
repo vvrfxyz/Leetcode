@@ -20,6 +20,9 @@ public class rotate {
             nums[end]=temp;
             end--;
         }
+        Integer i=1;
+
+        StringBuilder stringBuilder=new StringBuilder().append(i);
     }
 
     public static void main(String[] args) {
