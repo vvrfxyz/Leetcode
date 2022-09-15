@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b066d68-f5fc-4c59-99f7-f68af35aa15d" name="Changes" comment="移动0">
-      <change afterPath="$PROJECT_DIR$/src/isAnagram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/isPalindrome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +94,7 @@
       <workItem from="1662472140798" duration="1468000" />
       <workItem from="1662963925349" duration="1135000" />
       <workItem from="1663155291966" duration="2136000" />
-      <workItem from="1663251166038" duration="2613000" />
+      <workItem from="1663251166038" duration="5525000" />
     </task>
     <task id="LOCAL-00001" summary="买卖股票的最佳时机_maxProfit">
       <created>1659622129374</created>
@@ -166,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663253670539</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="移动0">
+      <created>1663254752329</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1663254752329</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
