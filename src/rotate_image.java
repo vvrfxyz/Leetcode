@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class rotate_image {
     public void rotate_1(int[][] matrix) {
         int n= matrix.length;
@@ -15,6 +17,7 @@ public class rotate_image {
     }
 
     public void rotate_2(int[][] matrix){
-
+        ArrayList<Integer> a=new ArrayList<>();
+        System.arraycopy();
     }
 }
