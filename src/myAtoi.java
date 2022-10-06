@@ -12,10 +12,12 @@ public class myAtoi {
                 }
                 if (s.charAt(i)=='+'){
                     haveSignFlag=true;
+                    firstchar=true;
                 }
                 if (s.charAt(i)=='-'){
                     sign=-1;
                     haveSignFlag=true;
+                    firstchar=true;
                 }
                 if (s.charAt(i)>='a'&&s.charAt(i)<='z'){
                     break;
@@ -23,14 +25,12 @@ public class myAtoi {
                 if (s.charAt(i)>='A'&&s.charAt(i)<='Z'){
                     break;
                 }
+                if (!(s.charAt(i)>='0'&&s.charAt(i)<='9')&&!firstchar)break;
                 if (s.charAt(i)>='0'&&s.charAt(i)<='9'){
                     n=n*10+(s.charAt(i)-'0');
                     haveSignFlag=true;
                     firstchar=true;
-                }else {
-                    if (firstchar)continue;
-                    else break;
-                }
+                }continue;
             }else {
                 if (s.charAt(i)>='0'&&s.charAt(i)<='9'){
                     if (n>n*10+(s.charAt(i)-'0')){
@@ -44,16 +44,15 @@ public class myAtoi {
                 }
             }
         }
-        System.out.println(yichu);
         if (yichu){
             if (sign>0)return (int)Math.pow(2,31)-1;
-            else return (int)Math.pow(2,31)*(-1);
+            else return (int)Math.pow(2,31)*(-1)-1;
         }
         return n*sign;
     }
 
     public static void main(String[] args) {
-        int a=myAtoi(" -1");
+        int a=myAtoi(" -91283472332");
         System.out.println(a);
     }
 }
