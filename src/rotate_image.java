@@ -18,6 +18,6 @@ public class rotate_image {
 
     public void rotate_2(int[][] matrix){
         ArrayList<Integer> a=new ArrayList<>();
-        System.arraycopy();
+        System.out.println(a);
     }
 }
